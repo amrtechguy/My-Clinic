@@ -11,7 +11,7 @@
 
 int main()
 {   
-    display_login_screen();
+    start_system();
 
     return 0;
 }
