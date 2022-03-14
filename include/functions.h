@@ -1,8 +1,14 @@
 // Function declarations
+void start_system();
 void clear_screen();
 bool do_login(std::string, std::string);
 void display_login_screen(std::string message = "");
 void display_options_menu(std::string message = "");
+
+void start_system()
+{
+    display_login_screen();
+}
 
 void clear_screen()
 {
@@ -96,10 +102,11 @@ void display_options_menu(std::string message)
     "19. edit appointment" << "\n" <<
     "20. delete appointment" << "\n\n" <<
 
-    "21. edit account username" << "\n"
-    "22. edit account password" << "\n"
+    "21. edit account username" << "\n" << 
+    "22. edit account password" << "\n\n" <<
+
     "23. edit system name" << "\n" <<
-    "24. edit system address" << "\n" <<
+    "24. edit system address" << "\n\n" <<
 
     "25. help" << "\n"  <<
     "25. clear" << "\n" <<
