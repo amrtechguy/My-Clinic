@@ -1,3 +1,5 @@
+#include "../include/Account.h"
+
 // Function declarations
 void start_system();
 void clear_screen();
@@ -17,7 +19,8 @@ void clear_screen()
 
 bool do_login(std::string username, std::string password)
 {
-    if(username == "admin" && password == "1234")
+    Account account {username, password};
+    if(account.is_logged_in())
     {
         return true;
     }
