@@ -5,7 +5,7 @@ Account::Account()
 {}
 
 Account::Account(std::string username, std::string password)
-    : id {0}, username {""}, password {""}, logged_in {false}
+    : Account()
 {
     login(username, password);
 }
