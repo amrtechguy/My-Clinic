@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 
 #include "../include/Account.h"
+#include "../include/menu_functions.h"
 
 // Function declarations
 void start_system();
