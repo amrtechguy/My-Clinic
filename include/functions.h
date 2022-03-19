@@ -78,8 +78,10 @@ void display_options_menu(std::string message)
     {
         std::cout << message << std::endl; 
     }
-    
-    std::cout << "\nYou can use the following options' titles or numbers:\n" << std::endl;
+
+    std::string option;
+
+    std::cout << "\nYou can use the following  shortcuts or their numbers:\n" << std::endl;
     std::cout << 
     "1. display doctors" << "\n" <<
     "2. display doctor" << "\n" <<
@@ -115,9 +117,124 @@ void display_options_menu(std::string message)
     "25. clear" << "\n" <<
     "27. exit" << "\n\n";
 
-    std::string option;
-    std::cout << "> ";
-    getline(std::cin, option);
+    do
+    {
+        std::cout << "> ";
+        getline(std::cin, option);
 
-    std::cout << "Your option is " << option << std::endl;
+        // handle selected options
+        if(option == "1" || option == "display doctors")
+        {
+            
+        }
+        else if(option == "2" || option == "display doctor")
+        {
+
+        }
+        else if(option == "3" || option == "add doctor")
+        {
+
+        }
+        else if(option == "4" || option == "edit doctor")
+        {
+
+        }
+        else if(option == "5" || option == "delete doctor")
+        {
+
+        }
+        else if(option == "6" || option == "display patients")
+        {
+
+        }
+        else if(option == "7" || option == "display patient")
+        {
+
+        }
+        else if(option == "8" || option == "add patient")
+        {
+
+        }
+        else if(option == "9" || option == "edit patient")
+        {
+
+        }
+        else if(option == "10" || option == "delete patient")
+        {
+
+        }
+        else if(option == "11" || option == "display services")
+        {
+
+        }
+        else if(option == "12" || option == "display service")
+        {
+
+        }
+        else if(option == "13" || option == "add service")
+        {
+
+        }
+        else if(option == "14" || option == "edit service")
+        {
+
+        }
+        else if(option == "15" || option == "delete service")
+        {
+
+        }
+        else if(option == "16" || option == "display appointments")
+        {
+
+        }
+        else if(option == "17" || option == "display appointment")
+        {
+
+        }
+        else if(option == "18" || option == "add appointment")
+        {
+
+        }
+        else if(option == "19" || option == "edit appointment")
+        {
+
+        }
+        else if(option == "20" || option == "delete appointment")
+        {
+
+        }
+        else if(option == "21" || option == "edit account username")
+        {
+
+        }
+        else if(option == "22" || option == "edit account password")
+        {
+
+        }
+        else if(option == "23" || option == "edit system name")
+        {
+
+        }
+        else if(option == "24" || option == "edit system address")
+        {
+
+        }
+        else if(option == "25" || option == "help")
+        {
+            // display a list of valid options
+        }
+        else if(option == "26" || option == "clear")
+        {
+            clear_screen();
+        }
+        else if(option == "27" || option == "exit")
+        {
+            std::cout << "\nGoodbye!\n" << std::endl;
+        }
+        else
+        {
+            std::cout << "\nInvalid option. Type `help` for a list of valid options.\n" << std::endl;
+        }
+    }
+    while(option != "exit" && option != "27");
 }
