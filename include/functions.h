@@ -1,3 +1,6 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
 #include "../include/Account.h"
 
 // Function declarations
@@ -244,3 +247,5 @@ void handle_menu_options()
     }
     while(option != "exit" && option != "27");
 }
+
+#endif
