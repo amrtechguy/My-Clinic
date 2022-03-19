@@ -6,6 +6,7 @@ void clear_screen();
 bool do_login(std::string, std::string);
 void display_login_screen(std::string message = "");
 void display_options_menu(std::string message = "");
+void handle_menu_options();
 
 void start_system()
 {
@@ -64,6 +65,7 @@ void display_login_screen(std::string message)
         clear_screen();
         std::string message = {"Welcome, " + username + "!"};
         display_options_menu(message);
+        handle_menu_options();
     }
     else
     {
@@ -78,8 +80,6 @@ void display_options_menu(std::string message)
     {
         std::cout << message << std::endl; 
     }
-
-    std::string option;
 
     std::cout << "\nYou can use the following  shortcuts or their numbers:\n" << std::endl;
     std::cout << 
@@ -117,6 +117,12 @@ void display_options_menu(std::string message)
     "25. clear" << "\n" <<
     "27. exit" << "\n\n";
 
+}
+
+void handle_menu_options()
+{
+    std::string option;
+    
     do
     {
         std::cout << "> ";
@@ -221,7 +227,7 @@ void display_options_menu(std::string message)
         }
         else if(option == "25" || option == "help")
         {
-            // display a list of valid options
+            display_options_menu();
         }
         else if(option == "26" || option == "clear")
         {
