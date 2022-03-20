@@ -135,11 +135,13 @@ void handle_menu_options()
         // handle selected options
         if(option == "1" || option == "display doctors")
         {
-            
+            display_doctors();
         }
         else if(option == "2" || option == "display doctor")
         {
+            // get the doctor id 
 
+            // call the function
         }
         else if(option == "3" || option == "add doctor")
         {
