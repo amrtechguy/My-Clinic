@@ -33,6 +33,7 @@
 
 # Project directories
 .vscode/
+bin/
 
 # Visual Studio files and directories
 .vs/
