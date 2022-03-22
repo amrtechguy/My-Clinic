@@ -1,13 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
-#ifndef __cplusplus__
-    #include <cstdlib>
-#else
-    #include <stdlib>
-#endif
-
-#include "../include/functions.h"
+#include <functions.h>
 
 int main()
 {   

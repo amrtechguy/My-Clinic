@@ -1,4 +1,4 @@
-#include "../include/Account.h"
+#include <Account.h>
 
 Account::Account()
     : id {0}, username {""}, password {""}, logged_in {false}

@@ -1,8 +1,8 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#include "../include/Account.h"
-#include "../include/menu_functions.h"
+#include <Account.h>
+#include <menu_functions.h>
 
 // Function declarations
 void start_system();
