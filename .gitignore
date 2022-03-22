@@ -33,3 +33,11 @@
 
 # Project directories
 .vscode/
+
+# Visual Studio files and directories
+.vs/
+Debug/
+*.sln
+*.vcxproj
+*.filters
+*.user
