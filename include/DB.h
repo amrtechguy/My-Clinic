@@ -13,6 +13,7 @@ private:
 	sqlite3 *db_handle;
 	std::string sql_query;
 	void *data;
+	int last_insert_rowid;
 
 private:
 	bool connect();
@@ -26,6 +27,7 @@ public:
 	{
 		return (static_cast<std::vector<std::vector<std::string>>*>(data));
 	}
+	int get_last_insert_rowid();
 	void reset();
 	~DB();
 };

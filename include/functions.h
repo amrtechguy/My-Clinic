@@ -111,15 +111,14 @@ void display_options_menu(std::string message)
     "19. edit appointment" << "\n" <<
     "20. delete appointment" << "\n\n" <<
 
-    "21. edit account username" << "\n" << 
-    "22. edit account password" << "\n\n" <<
+    "21. edit account username" << "\n\n" << 
 
-    "23. edit system name" << "\n" <<
-    "24. edit system address" << "\n\n" <<
+    "22. edit system name" << "\n" <<
+    "23. edit system address" << "\n\n" <<
 
-    "25. help" << "\n"  <<
+    "24. help" << "\n"  <<
     "25. clear" << "\n" <<
-    "27. exit" << "\n\n";
+    "26. exit" << "\n\n";
 
 }
 
@@ -139,107 +138,101 @@ void handle_menu_options()
         }
         else if(option == "2" || option == "display doctor")
         {
-            // get the doctor id 
-
-            // call the function
+            display_doctor();
         }
         else if(option == "3" || option == "add doctor")
         {
-
+            add_doctor();
         }
         else if(option == "4" || option == "edit doctor")
         {
-
+            edit_doctor();
         }
         else if(option == "5" || option == "delete doctor")
         {
-
+            delete_doctor();
         }
         else if(option == "6" || option == "display patients")
         {
-
+            display_patients();
         }
         else if(option == "7" || option == "display patient")
         {
-
+            display_patient();
         }
         else if(option == "8" || option == "add patient")
         {
-
+            add_patient();
         }
         else if(option == "9" || option == "edit patient")
         {
-
+            edit_patient();
         }
         else if(option == "10" || option == "delete patient")
         {
-
+            delete_patient();
         }
         else if(option == "11" || option == "display services")
         {
-
+            display_services();
         }
         else if(option == "12" || option == "display service")
         {
-
+            display_service();
         }
         else if(option == "13" || option == "add service")
         {
-
+            add_service();
         }
         else if(option == "14" || option == "edit service")
         {
-
+            edit_service();
         }
         else if(option == "15" || option == "delete service")
         {
-
+            delete_service();
         }
         else if(option == "16" || option == "display appointments")
         {
-
+            display_appointments();
         }
         else if(option == "17" || option == "display appointment")
         {
-
+            display_appointment();
         }
         else if(option == "18" || option == "add appointment")
         {
-
+            add_appointment();
         }
         else if(option == "19" || option == "edit appointment")
         {
-
+            edit_appointment();
         }
         else if(option == "20" || option == "delete appointment")
         {
-
+            delete_appointment();
         }
         else if(option == "21" || option == "edit account username")
         {
-
+            edit_account_username();
         }
         else if(option == "22" || option == "edit account password")
         {
-
+            edit_account_password();
         }
         else if(option == "23" || option == "edit system name")
         {
-
+            edit_system_name();
         }
-        else if(option == "24" || option == "edit system address")
-        {
-
-        }
-        else if(option == "25" || option == "help")
+        else if(option == "24" || option == "help")
         {
             display_options_menu();
         }
-        else if(option == "26" || option == "clear")
+        else if(option == "25" || option == "clear")
         {
             clear_screen();
         }
-        else if(option == "27" || option == "exit")
+        else if(option == "26" || option == "exit")
         {
             std::cout << "\nGoodbye!\n" << std::endl;
         }

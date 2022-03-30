@@ -5,7 +5,7 @@
 #include <DB.h>
 
 DB::DB()
-	: db_handle {nullptr}, data {nullptr}
+	: db_handle {nullptr}, data {nullptr}, last_insert_rowid {0}
 {
 	data = new std::vector<std::vector<std::string>>;
 }
@@ -53,10 +53,10 @@ void DB::query(std::string sql)
 	if (connect())
 	{
 		// define all tables
-		std::string create_table_account = "CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT);";
-		std::string create_table_person = "CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, gender TEXT, contact TEXT, address TEXT, note TEXT, type TEXT, speciality TEXT);";
-		std::string create_table_service = "CREATE TABLE IF NOT EXISTS service (id INTEGER PRIMARY KEY, name TEXT, cost REAL);";
-		std::string create_table_appointment = "CREATE TABLE IF NOT EXISTS appointment (id INTEGER PRIMARY KEY, doctor_id INTEGER, patient_id INTEGER, date TEXT);";
+		std::string create_table_account = "DROP TABLE IF EXISTS account;CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT);";
+		std::string create_table_person = "DROP TABLE IF EXISTS person;CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, gender TEXT, contact TEXT, address TEXT, note TEXT, type TEXT, speciality TEXT);";
+		std::string create_table_service = "DROP TABLE IF EXISTS service;CREATE TABLE IF NOT EXISTS service (id INTEGER PRIMARY KEY, name TEXT, cost REAL);";
+		std::string create_table_appointment = "DROP TABLE IF EXISTS appointment;CREATE TABLE IF NOT EXISTS appointment (id INTEGER PRIMARY KEY, doctor_id INTEGER, patient_id INTEGER, date TEXT);";
 		std::string create_tables_all = create_table_account + create_table_person + create_table_service + create_table_appointment;
 		
 		// create tables
@@ -91,6 +91,12 @@ void DB::query(std::string sql)
 			{
 				int conn = sqlite3_exec(db_handle, sql_query.c_str(), nullptr, nullptr, &errmsg);
 
+				// get the last insert row id
+				if(query_key == "insert")
+				{
+					last_insert_rowid = sqlite3_last_insert_rowid(db_handle);
+				}
+
 				if (conn != SQLITE_OK)
 				{
 					std::string msg = "Unable to execute the query.\nError message: ";
@@ -107,8 +113,14 @@ void DB::query(std::string sql)
 	}
 }
 
+int DB::get_last_insert_rowid()
+{
+	return last_insert_rowid;
+}
+
 void DB::reset()
 {
+	last_insert_rowid = 0;
 	(static_cast<std::vector<std::vector<std::string>>*>(data))->erase((static_cast<std::vector<std::vector<std::string>>*>(data))->begin(), (static_cast<std::vector<std::vector<std::string>>*>(data))->end());
 }
 
