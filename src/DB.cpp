@@ -53,10 +53,10 @@ void DB::query(std::string sql)
 	if (connect())
 	{
 		// define all tables
-		std::string create_table_account = "DROP TABLE IF EXISTS account;CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT);";
-		std::string create_table_person = "DROP TABLE IF EXISTS person;CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, gender TEXT, contact TEXT, address TEXT, note TEXT, type TEXT, speciality TEXT);";
-		std::string create_table_service = "DROP TABLE IF EXISTS service;CREATE TABLE IF NOT EXISTS service (id INTEGER PRIMARY KEY, name TEXT, cost REAL);";
-		std::string create_table_appointment = "DROP TABLE IF EXISTS appointment;CREATE TABLE IF NOT EXISTS appointment (id INTEGER PRIMARY KEY, doctor_id INTEGER, patient_id INTEGER, date TEXT);";
+		std::string create_table_account = "CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT); INSERT INTO account ('username', 'password') VALUES ('admin', '1234');";
+		std::string create_table_person = "CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, gender TEXT, contact TEXT, address TEXT, note TEXT, type TEXT, speciality TEXT);";
+		std::string create_table_service = "CREATE TABLE IF NOT EXISTS service (id INTEGER PRIMARY KEY, name TEXT, cost REAL);";
+		std::string create_table_appointment = "CREATE TABLE IF NOT EXISTS appointment (id INTEGER PRIMARY KEY, doctor_id INTEGER, patient_id INTEGER, date TEXT);";
 		std::string create_tables_all = create_table_account + create_table_person + create_table_service + create_table_appointment;
 		
 		// create tables
@@ -86,12 +86,13 @@ void DB::query(std::string sql)
 					std::cerr << msg << sqlite3_errmsg(db_handle) << std::endl;
 				}
 			}
-			// if KEY == "..."
+			// if key == "..."
 			else
 			{
 				int conn = sqlite3_exec(db_handle, sql_query.c_str(), nullptr, nullptr, &errmsg);
 
-				// get the last insert row id
+				// if key == "insert", 
+				// get and store the last insert row id
 				if(query_key == "insert")
 				{
 					last_insert_rowid = sqlite3_last_insert_rowid(db_handle);

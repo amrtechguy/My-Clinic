@@ -1,4 +1,5 @@
 #include <Account.h>
+#include <DB.h>
 
 Account::Account()
     : id {0}, username {""}, password {""}, logged_in {false}
@@ -12,8 +13,11 @@ Account::Account(std::string username, std::string password)
 
 void Account::login(std::string username, std::string password)
 {
-    // Hard-coded authentication, until using a database
-    if(username == "admin" && password == "1234")
+    std::string sql_query = "SELECT * FROM account WHERE `username` = '" + username + "' AND `password` = '" + password + "'";
+
+    DB db;
+    db.query(sql_query);
+    if(db.get_data()->size() > 1)
     {
         logged_in = true;
     }

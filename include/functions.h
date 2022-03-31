@@ -44,8 +44,7 @@ void display_login_screen(std::string message)
     {
         std::cout << 
         "\n-----------------------------------------------" << "\n" <<
-        "- Welcome, to (Clinic name) management system!" << "\n" <<
-        "- Address: (the clinic address comes here)" << "\n" <<
+        "- Welcome, to My Clinic management system!" << "\n" <<
         "-----------------------------------------------" << "\n\n";
     }
     else
@@ -111,14 +110,12 @@ void display_options_menu(std::string message)
     "19. edit appointment" << "\n" <<
     "20. delete appointment" << "\n\n" <<
 
-    "21. edit account username" << "\n\n" << 
+    "21. edit account username" << "\n" << 
+    "22. edit account password" << "\n\n" <<
 
-    "22. edit system name" << "\n" <<
-    "23. edit system address" << "\n\n" <<
-
-    "24. help" << "\n"  <<
-    "25. clear" << "\n" <<
-    "26. exit" << "\n\n";
+    "23. help" << "\n"  <<
+    "24. clear" << "\n" <<
+    "25. exit" << "\n\n";
 
 }
 

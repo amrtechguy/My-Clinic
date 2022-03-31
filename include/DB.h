@@ -39,9 +39,19 @@ static int store_selected_data(void* data, int argc, char** argv, char** azColNa
 	// store the column names
 	if ((static_cast<std::vector<std::vector<std::string>>*>(data))->size() == 0)
 	{
-		for (int i{0}; i < argc; i++)
+		// store column names
+		for (int i {0}; i < argc; i++)
 		{
 			single_row.push_back(azColName[i]);
+		}
+
+		(static_cast<std::vector<std::vector<std::string>>*>(data))->push_back(single_row);
+		single_row.erase(single_row.begin(), single_row.end());
+
+		// store the first row
+		for (int i{ 0 }; i < argc; i++)
+		{
+			single_row.push_back(argv[i]);
 		}
 
 		(static_cast<std::vector<std::vector<std::string>>*>(data))->push_back(single_row);
@@ -49,8 +59,8 @@ static int store_selected_data(void* data, int argc, char** argv, char** azColNa
 	}
 	else
 	{
-		// store the rows
-		for (int i{0}; i < argc; i++)
+		// store the rest of rows
+		for (int i {0}; i < argc; i++)
 		{
 			single_row.push_back(argv[i]);
 		}
