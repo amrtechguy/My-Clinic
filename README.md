@@ -4,9 +4,9 @@ It's a console application of a clinic management system.
 ## How it works
 When you build and open the program, you'll get a login screen that requires a username and a password. You can enter the default credentials as following, username: `admin` and password: `1234`. Once you login, you'll get a welcome screen with a list of available options that you can use by name or number. Each option has a specific function. Enter the option name or number in the console to take an action. Here's a list of the available options that you can use:
 
-- `1. display doctors`
+- `1. display doctors`: display a list of all doctors added to the database.
 
-- `2. display doctor`
+- `2. display doctor`: display a specific doctor's info based on a given id that you can get from displaying all doctors.
 
 - `3. add doctor`
 
@@ -15,9 +15,9 @@ When you build and open the program, you'll get a login screen that requires a u
 - `5. delete doctor`
 
 
-- `6. display patients`
+- `6. display patients`: display a list of all patients added to the database.
 
-- `7. display patient`
+- `7. display patient`: display a specific patient's info based on a given id that you can get from displaying all patients.
 
 - `8. add patient`
 
@@ -26,9 +26,9 @@ When you build and open the program, you'll get a login screen that requires a u
 - `10. delete patient`
 
 
-- `11. display services`
+- `11. display services`: display a list of all services added to the database.
 
-- `12. display service`
+- `12. display service`: display a specific service details based on a given id that you can get from displaying all services.
 
 - `13. add service`
 
@@ -37,9 +37,9 @@ When you build and open the program, you'll get a login screen that requires a u
 - `15. delete service`
 
 
-- `16. display appointments`
+- `16. display appointments`: display a list of all appointments added to the database.
 
-- `17. display appointment`
+- `17. display appointment`: display a specific appointment details based on a given id that you can get from displaying all appointments.
 
 - `18. add appointment`
 
@@ -48,14 +48,14 @@ When you build and open the program, you'll get a login screen that requires a u
 - `20. delete appointment`
 
 
-- `21. edit account password`
+- `21. edit account password`: to change the default password to a new one.
 
 
-- `22. help`
+- `22. help`: to display this menu of available options.
 
-- `23. clear`
+- `23. clear`: to clear the console screen.
 
-- `24. exit`
+- `24. exit`: to logout of the program.
 
 ## The project structure
 - `/include/`: this is for the project header files.
