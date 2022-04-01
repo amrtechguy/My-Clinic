@@ -1,18 +1,61 @@
 # My Clinic
-It's a console application clinic management system.
+It's a console application of a clinic management system.
 
 ## How it works
 When you build and open the program, you'll get a login screen that requires a username and a password. You can enter the default credentials as following, username: `admin` and password: `1234`. Once you login, you'll get a welcome screen with a list of available options that you can use by name or number. Each option has a specific function. Enter the option name or number in the console to take an action. Here's a list of the available options that you can use:
 
-- `list`: to list all tasks.
+- `1. display doctors`
 
-- `add`: to add a new task to the list.
+- `2. display doctor`
 
-- `remove`: to remove a task from the list.
+- `3. add doctor`
 
-- `help`: to display a list of valid shortcuts.
+- `4. edit doctor`
 
-- `exit`: to exit the menu.
+- `5. delete doctor`
+
+
+- `6. display patients`
+
+- `7. display patient`
+
+- `8. add patient`
+
+- `9. edit patient`
+
+- `10. delete patient`
+
+
+- `11. display services`
+
+- `12. display service`
+
+- `13. add service`
+
+- `14. edit service`
+
+- `15. delete service`
+
+
+- `16. display appointments`
+
+- `17. display appointment`
+
+- `18. add appointment`
+
+- `19. edit appointment`
+
+- `20. delete appointment`
+
+
+- `21. edit account password`
+
+
+- `22. help`
+
+- `23. clear`
+
+- `24. exit`
 
 ## The project structure
 - `/.vscode/`: this is for the configuration files of vscode editor on windows.
