@@ -1,5 +1,5 @@
 # My Clinic
-It's a console application of a clinic management system.
+It's a console application of a clinic management system. It can be used to manage records of doctors, patients, medical services, and medical appointments.
 
 ## How it works
 When you build and open the program, you'll get a login screen that requires a username and a password. You can enter the default credentials as following, username: `admin` and password: `1234`. Once you login, you'll get a welcome screen with a list of available options that you can use by name or number. Each option has a specific function. Enter the option name or number in the console to take an action. Here's a list of the available options that you can use:
