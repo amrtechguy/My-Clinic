@@ -58,13 +58,12 @@ When you build and open the program, you'll get a login screen that requires a u
 - `24. exit`
 
 ## The project structure
-- `/.vscode/`: this is for the configuration files of vscode editor on windows.
-
-- `/bin/`: this is for the project binary files or executable files.
-
 - `/include/`: this is for the project header files.
 
 - `/src/`: this is for the project source files.
+
+## Required libraries
+- `sqlite3`: Download the amalgamation version here: [sqlite-amalgamation-3380200.zip](https://www.sqlite.org/2022/sqlite-amalgamation-3380200.zip). After downloading the file and unzipping it, get the header file `sqlite3.h` and add it to the directory `/include/` and get the source file `sqlite3.c` and add it to the directory `/src/`. You can download sqlite3 from the official website
 
 ## Environment where tested
 - `IDE`: Visual Studio Code.
