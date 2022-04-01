@@ -31,10 +31,12 @@
 *.out
 *.app
 
-# Project directories
+# Project files and directories
 .vscode/
 bin/
 *.db
+src/sqlite3.c
+include/sqlite3.h
 
 # Visual Studio files and directories
 .vs/
