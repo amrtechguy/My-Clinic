@@ -8,44 +8,44 @@ When you build and open the program, you'll get a login screen that requires a u
 
 - `2. display doctor`: display a specific doctor's info based on a given id that you can get from displaying all doctors.
 
-- `3. add doctor`
+- `3. add doctor`: add a new doctor's info to the database.
 
-- `4. edit doctor`
+- `4. edit doctor`: to edit a specific doctor's info based on a given id.
 
-- `5. delete doctor`
+- `5. delete doctor`: to delete a specific doctor based on a given id.
 
 
 - `6. display patients`: display a list of all patients added to the database.
 
 - `7. display patient`: display a specific patient's info based on a given id that you can get from displaying all patients.
 
-- `8. add patient`
+- `8. add patient`: add a new patient's info to the database.
 
-- `9. edit patient`
+- `9. edit patient`: to edit a specific patient's info based on a given id.
 
-- `10. delete patient`
+- `10. delete patient`: to delete a specific patient based on a given id.
 
 
 - `11. display services`: display a list of all services added to the database.
 
 - `12. display service`: display a specific service details based on a given id that you can get from displaying all services.
 
-- `13. add service`
+- `13. add service`: add a new service details to the database.
 
-- `14. edit service`
+- `14. edit service`: to edit a specific service details based on a given id.
 
-- `15. delete service`
+- `15. delete service`: to delete a specific service based on a given id.
 
 
 - `16. display appointments`: display a list of all appointments added to the database.
 
 - `17. display appointment`: display a specific appointment details based on a given id that you can get from displaying all appointments.
 
-- `18. add appointment`
+- `18. add appointment`: add a new appointment details to the database.
 
-- `19. edit appointment`
+- `19. edit appointment`: to edit a specific appointment details based on a given id.
 
-- `20. delete appointment`
+- `20. delete appointment`: to delete a specific appointment based on a given id.
 
 
 - `21. edit account password`: to change the default password to a new one.
