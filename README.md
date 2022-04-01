@@ -63,7 +63,7 @@ When you build and open the program, you'll get a login screen that requires a u
 - `/src/`: this is for the project source files.
 
 ## Required libraries
-- `sqlite3`: Download the amalgamation version here: [sqlite-amalgamation-3380200.zip](https://www.sqlite.org/2022/sqlite-amalgamation-3380200.zip). After downloading the file and unzipping it, get the header file `sqlite3.h` and add it to the directory `/include/` and get the source file `sqlite3.c` and add it to the directory `/src/`. You can download sqlite3 from the official website
+- `sqlite3`: download the amalgamation version with "sha3: 00a008f1df87764c9ae794e9e7a68ae9a377f807d03c7a3ea9fc0ac3a1a1236f" here: [sqlite-amalgamation-3380200.zip](https://www.sqlite.org/2022/sqlite-amalgamation-3380200.zip). After downloading the file and unzipping it, get the header file "sqlite3.h" and add it to the directory "/include/", then get the source file "sqlite3.c" and add it to the directory "/src/". You can download sqlite3 from the official website
 
 ## Environment where tested
 - `IDE`: Visual Studio Code.
