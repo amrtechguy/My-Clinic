@@ -84,7 +84,7 @@ void display_options_menu(std::string message)
         std::cout << message << std::endl; 
     }
 
-    std::cout << "\nYou can use the following  shortcuts or their numbers:\n" << std::endl;
+    std::cout << "\nYou can use the following  options by names or numbers:\n" << std::endl;
     std::cout << 
     "1. display doctors" << "\n" <<
     "2. display doctor" << "\n" <<
@@ -110,12 +110,11 @@ void display_options_menu(std::string message)
     "19. edit appointment" << "\n" <<
     "20. delete appointment" << "\n\n" <<
 
-    "21. edit account username" << "\n" << 
-    "22. edit account password" << "\n\n" <<
+    "21. edit account password" << "\n\n" <<
 
-    "23. help" << "\n"  <<
-    "24. clear" << "\n" <<
-    "25. exit" << "\n\n";
+    "22. help" << "\n"  <<
+    "23. clear" << "\n" <<
+    "24. exit" << "\n\n";
 
 }
 
@@ -209,27 +208,19 @@ void handle_menu_options()
         {
             delete_appointment();
         }
-        else if(option == "21" || option == "edit account username")
-        {
-            edit_account_username();
-        }
-        else if(option == "22" || option == "edit account password")
+        else if(option == "21" || option == "edit account password")
         {
             edit_account_password();
         }
-        else if(option == "23" || option == "edit system name")
-        {
-            edit_system_name();
-        }
-        else if(option == "24" || option == "help")
+        else if(option == "22" || option == "help")
         {
             display_options_menu();
         }
-        else if(option == "25" || option == "clear")
+        else if(option == "23" || option == "clear")
         {
             clear_screen();
         }
-        else if(option == "26" || option == "exit")
+        else if(option == "24" || option == "exit")
         {
             std::cout << "\nGoodbye!\n" << std::endl;
         }

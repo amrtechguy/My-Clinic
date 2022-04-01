@@ -53,7 +53,7 @@ void DB::query(std::string sql)
 	if (connect())
 	{
 		// define all tables
-		std::string create_table_account = "CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT); INSERT INTO account ('username', 'password') VALUES ('admin', '1234');";
+		std::string create_table_account = "CREATE TABLE IF NOT EXISTS account (id INTEGER PRIMARY KEY, username TEXT, password TEXT);";
 		std::string create_table_person = "CREATE TABLE IF NOT EXISTS person (id INTEGER PRIMARY KEY, name TEXT, gender TEXT, contact TEXT, address TEXT, note TEXT, type TEXT, speciality TEXT);";
 		std::string create_table_service = "CREATE TABLE IF NOT EXISTS service (id INTEGER PRIMARY KEY, name TEXT, cost REAL);";
 		std::string create_table_appointment = "CREATE TABLE IF NOT EXISTS appointment (id INTEGER PRIMARY KEY, doctor_id INTEGER, patient_id INTEGER, date TEXT);";
@@ -122,6 +122,7 @@ int DB::get_last_insert_rowid()
 void DB::reset()
 {
 	last_insert_rowid = 0;
+	sql_query = "";
 	(static_cast<std::vector<std::vector<std::string>>*>(data))->erase((static_cast<std::vector<std::vector<std::string>>*>(data))->begin(), (static_cast<std::vector<std::vector<std::string>>*>(data))->end());
 }
 
