@@ -1,7 +1,6 @@
 #ifndef DB_H
 #define DB_H
 
-#include <typeinfo>
 #include <string>
 #include <vector>
 #include <sqlite3.h>
