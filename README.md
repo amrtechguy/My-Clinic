@@ -58,7 +58,7 @@ When you build and open the program, you'll get a login screen that requires a u
 - `src/`: this is for the project source files.
 
 ## Dependencies
-- `sqlite3`: download the amalgamation version from here: [sqlite-amalgamation-3380200.zip](https://www.sqlite.org/2022/sqlite-amalgamation-3380200.zip). After downloading the file and unzipping it, get the header file *"sqlite3.h"* and add it to the directory *"include/"*, then get the source file *"sqlite3.c"* and add it to the directory *"src/"*.
+- `sqlite3`: It's the library or engine that's used for handling the database file that our program uses for storing it's data. Make sure you download the amalgamation version of it from here: [sqlite-amalgamation-3380200.zip](https://www.sqlite.org/2022/sqlite-amalgamation-3380200.zip). After downloading the file and unzipping it, get the header file *"sqlite3.h"* and add it to the directory *"include/"*, then get the source file *"sqlite3.c"* and add it to the directory *"src/"*.
 
 ## Environment where tested
 - `IDE`: Visual Studio 2019.
